@@ -6,7 +6,7 @@ const Tableta = require('../Productos/Tableta');
 class LineaEconomicaFabrica extends LineaFabrica {
   crearComputadora() {
     return new Computadora({
-      nombre: 'EasyBox E1',
+      nombre: 'TOSHIBA',
       precio: 550,
       linea: 'Económica',
       especificaciones: { cpu: 'i3', ram: '8GB', ssd: '256GB', gpu: 'Integrada' }
@@ -14,7 +14,7 @@ class LineaEconomicaFabrica extends LineaFabrica {
   }
   crearTelefono() {
     return new Telefono({
-      nombre: 'Pocket A3',
+      nombre: 'OPPO',
       precio: 199,
       linea: 'Económica',
       especificaciones: { camara: '13MP', pantalla: '6.0" LCD 60Hz', bateria: '4000mAh' }
