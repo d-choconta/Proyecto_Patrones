@@ -10,6 +10,10 @@ const LineaPremium = require('./Patrones/Fabricas_Abstractas/LineaPremium');
 const LineaEstandar = require('./Patrones/Fabricas_Abstractas/LineaEstandar');
 const LineaEconomica = require('./Patrones/Fabricas_Abstractas/LineaEconomica');
 
+// Decorator
+const NombreEnMayusculas   = require('./Patrones/Decoradores/NombreEnMayusculas');
+const MostrarConEstrellas  = require('./Patrones/Decoradores/MostrarConEstrellas');
+
 console.log('Singleton');
 const conf1 = ConfiguracionGlobal.obtenerInstancia();
 const conf2 = ConfiguracionGlobal.obtenerInstancia();
@@ -74,5 +78,12 @@ function imprimirFamilia(fabricaLinea, etiqueta) {
 imprimirFamilia(new LineaPremium(), 'Premium');
 imprimirFamilia(new LineaEstandar(), 'Estándar');
 imprimirFamilia(new LineaEconomica(), 'Económica');
+
+console.log('\nDecorator con estrellitasssssssss y a mayusculas');
+let telDecorado = new NombreEnMayusculas(tel);    
+telDecorado     = new MostrarConEstrellas(telDecorado);
+
+console.log('\nTeléfono decorado:');
+telDecorado.mostrarInfo();
 
 console.log('\nListo termino');
