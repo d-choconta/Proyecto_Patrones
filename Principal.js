@@ -79,7 +79,7 @@ imprimirFamilia(new LineaPremium(), 'Premium');
 imprimirFamilia(new LineaEstandar(), 'Estándar');
 imprimirFamilia(new LineaEconomica(), 'Económica');
 
-console.log('\nDecorator con estrellitasssssssss y a mayusculas');
+console.log('\n>>>Decorator con estrellitasssssssss y a mayusculas');
 let telDecorado = new NombreEnMayusculas(tel);    
 telDecorado     = new MostrarConEstrellas(telDecorado);
 
